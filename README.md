@@ -17,3 +17,10 @@ Metrics: PII leakage %, attack success, latency, throughput
 Model: Llama-3.1-8B on AWS g5.xlarge
 
 Data: 500 business chats w/ synthetic PII (Enron + faker)
+
+| Condition | PII Leak % | Latency | Attack Success |
+| --------- | ---------- | ------- | -------------- |
+| Baseline  | 25%        | 1.2s    | 60%            |
+| PbD       | 8%         | 1.4s    | 12%            |
+
+
