@@ -1,0 +1,45 @@
+version: '3.8'
+services:
+  baseline-normal:
+    build: 
+      context: .
+      dockerfile: Dockerfile.baseline
+    env_file: config/baseline.env
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+
+  baseline-attack:
+    build: 
+      context: .
+      dockerfile: Dockerfile.baseline
+    env_file: config/baseline.env
+    ports:
+      - "8001:8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - ATTACK_MODE=true
+
+  pbd-normal:
+    build: 
+      context: .
+      dockerfile: Dockerfile.pbd
+    env_file: config/pbd.env
+    ports:
+      - "8002:8000"
+    volumes:
+      - ./data:/app/data
+
+  pbd-attack:
+    build: 
+      context: .
+      dockerfile: Dockerfile.pbd
+    env_file: config/pbd.env
+    ports:
+      - "8003:8000"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - ATTACK_MODE=true
