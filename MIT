@@ -1,0 +1,17 @@
+
+***
+
+## **File 2: `requirements.txt`**
+```txt
+llama-cpp-python==0.2.78
+langchain==0.1.20
+presidio-analyzer==2.2.351
+faiss-cpu==1.8.0
+fastapi==0.111.0
+uvicorn==0.30.1
+locust==2.29.0
+pandas==2.2.2
+scipy==1.13.1
+faker==28.1.0
+streamlit==1.35.0
+prometheus-client==0.20.0
