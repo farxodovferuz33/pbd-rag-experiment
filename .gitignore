@@ -1,0 +1,19 @@
+# Data
+data/*.faiss
+data/*.bin
+data/queries.jsonl
+results/
+*.log
+*.pkl
+
+# Docker
+.dockerignore
+*.dockerimg
+
+# Env
+.env
+*.env.local
+
+# IDE
+.vscode/
+.idea/
